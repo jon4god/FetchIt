@@ -63,7 +63,7 @@
 
         try {
           const query = await fetch(this.request, { body: this.formData });
-          const response = await query.json();
+          const response = await query.json("{}");
 
           const afterEvent = new CustomEvent(FetchIt.events.after, {
             cancelable: true,
